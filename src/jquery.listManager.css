@@ -1,0 +1,4 @@
+a.cont_box_link{background:url(cont_icon.jpg) no-repeat;float:left;margin-right:8px;width:17px; height:17px;display:inline-block;*display:inline;*zoom:1;font-size:0px;line-height:0;}
+a.cont_add{background-position:0 -34px;}
+a.cont_del{background-position:0 0;}
+a.cont_up{background-position:0 -17px;}
