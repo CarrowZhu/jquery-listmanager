@@ -1,0 +1,63 @@
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="src/jquery.listManager.css"/>
+</head>	
+<body>
+	<table>
+		<tr>
+			<td style="text-align:right;">模块：</td>
+			<td>
+				<table id="hotSpotLinks">
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table id="hotSpotTemplate" style="display: none">
+		<tr>
+			<td>
+				<input style="width: 80px" name="name" type="text" value="名称"/>
+				<input style="width: 100px" name="url" type="text" value="URL"/>
+			</td>
+			<td>
+				<a name="up" href="javascript:void(0);" class="cont_box_link cont_up">up</a>
+				<a name="add" href="javascript:void(0);" class="cont_box_link cont_add">add</a>
+				<a name="delete" href="javascript:void(0);" class="cont_box_link cont_del">delete</a>
+			</td>
+		</tr>
+	</table>
+	<script type="text/javascript" src="jquery-1.3.2.min.js"></script>	
+	<script type="text/javascript" src="src/jquery.listManager.min.js"></script>
+	<script language="javascript">
+	$(function(){	
+		var listManager = $.listManager({
+			list: "#hotSpotLinks",
+			element: "#hotSpotTemplate tr",
+			elementInList: "tr",
+			setValue: function(element, value) {
+				$(":input[name='name']", element).val(value.name);
+				$(":input[name='url']", element).val(value.url);
+			},
+			preAdd: function(element) {
+				alert("preAdd");
+			},
+			postAdd: function(element) {
+				alert("postAdd");
+			},
+			preDelete: function(element) {
+				alert("preDelete");
+			},
+			postDelete: function(element) {
+				alert("postDelete");
+			},
+			show: function(list, add, del, up) {
+			}
+		});
+		listManager.init({
+			name: "name",
+			url: "url"
+		});
+		listManager.setReadOnly(true);
+	});
+	</script>
+</body>	
+</html>
