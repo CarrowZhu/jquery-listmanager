@@ -71,3 +71,5 @@ if true, the buttons will be hiden and the component (:input, select) can not be
 <br>
 # examples<br>
 to use the plugin is really simple, please download the demo.html for details.
+
+![image](https://github.com/CarrowZhu/jquery-listmanager/blob/master/demo.png)
